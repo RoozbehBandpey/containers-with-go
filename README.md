@@ -1,6 +1,9 @@
 # containers-with-go
 Building containers from scratch with golang
 
+
+Following this [goto; talk](https://youtu.be/8fi7uSYlOdc)
+
 For building a container from scratch we have to understand what happens when you run `docker run <image>`
 
 
@@ -50,7 +53,7 @@ and
 
 `$ hostname`
 
-You'll see it has inherited the hostname from your host machine, but you can now change the hostname by just typing `hostname <new hotname>`
+You'll see it has inherited the hostname from your host machine, but you can now change the hostname by just typing `hostname <new hotname>` without affecting on what is on host machine
 
 
 NOTE:
@@ -63,7 +66,9 @@ cmd+shift+p
 
 Type `setting.json`
 
+ps is looking at /proc directory
+`ls /proc`
 ## Chroot
-
+We need to change the root of directory, beacuse we need our own version of /proc for our container
 ## Cgroups
 
